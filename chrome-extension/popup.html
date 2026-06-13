@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Nexus Work for ChatGPT</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <header>
+    <span>N</span>
+    <div><b>Nexus Work</b><small>ChatGPT 数据连接器</small></div>
+  </header>
+
+  <section id="setupPanel">
+    <b>连接云端 ChatGPT App</b>
+    <p>填写部署完成后获得的 HTTPS 地址和同步令牌。</p>
+    <label>服务地址<input id="endpoint" type="url" placeholder="https://your-app.example.com"></label>
+    <label>同步令牌<input id="syncToken" type="password" placeholder="NEXUS_SYNC_TOKEN"></label>
+    <div class="row">
+      <button id="save" class="primary">保存并测试</button>
+      <button id="forget" class="secondary">清除</button>
+    </div>
+  </section>
+
+  <div id="serviceState" class="service-state checking">尚未配置云端服务</div>
+
+  <section id="pageState">
+    <b>正在检查当前页面</b>
+    <p>请在 Alibaba.com 店铺后台使用。</p>
+  </section>
+
+  <button id="openAlibaba" class="secondary wide">打开 Alibaba.com</button>
+  <button id="capture" class="primary wide" disabled>同步当前页到 ChatGPT</button>
+  <p class="privacy">只同步当前页面已经显示的文本、表格和指标，不读取密码、Cookie 或验证码。</p>
+  <div id="result"></div>
+  <script src="popup.js"></script>
+</body>
+</html>

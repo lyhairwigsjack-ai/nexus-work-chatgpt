@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "Nexus Work for ChatGPT",
+  "version": "1.0.0",
+  "description": "将你主动选择的 Alibaba.com 后台页面安全同步到私人 ChatGPT App。",
+  "permissions": ["activeTab", "scripting", "tabs", "storage"],
+  "optional_host_permissions": [
+    "https://*/*",
+    "http://127.0.0.1/*",
+    "http://localhost/*"
+  ],
+  "host_permissions": ["https://*.alibaba.com/*"],
+  "action": {
+    "default_title": "Nexus Work for ChatGPT",
+    "default_popup": "popup.html"
+  }
+}
