@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: nexus-work-chatgpt-app
+    runtime: docker
+    plan: starter
+    healthCheckPath: /health
+    envVars:
+      - key: NEXUS_SYNC_TOKEN
+        sync: false
+      - key: NEXUS_APP_KEY
+        sync: false
+      - key: DATA_DIR
+        value: /var/lib/nexus-work
+    disk:
+      name: nexus-work-data
+      mountPath: /var/lib/nexus-work
+      sizeGB: 1
